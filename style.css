@@ -1,0 +1,35 @@
+#container
+{
+	width: auto;
+	margin-left: auto;
+	margin-right:auto;
+	background-color: #3399CC;
+}
+#logo
+{
+	color: white;
+	text-align:center;
+	font-size: 30px;
+	color: white;
+}
+#login
+{
+	float: left;
+	width: 500px;
+	text-align: center;
+	height: auto;
+	
+}
+#register
+{
+	float: left;
+	width: 500px;
+	text-align: center;
+}
+#footer
+{
+	clear:both;
+	width: 1000px;
+	text-align: center;
+	background-color: #2288BB;
+}
