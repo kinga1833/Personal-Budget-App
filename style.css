@@ -1,35 +1,95 @@
+body
+{
+	background-color: lightgrey;
+	font-size: 60px;
+}
 #container
 {
-	width: auto;
+	width: 1000px;
 	margin-left: auto;
 	margin-right:auto;
-	background-color: #3399CC;
 }
 #logo
 {
-	color: white;
-	text-align:center;
-	font-size: 30px;
-	color: white;
-}
-#login
-{
-	float: left;
-	width: 500px;
+	width:960px;
+	padding-top: 70px;
+	padding-bottom: 30px;
+	font-family: 'Nunito', sans-serif;
 	text-align: center;
-	height: auto;
-	
+	letter-spacing: 3px;
+	height: 50px;
 }
-#register
+.rectangle
 {
+	background-color: lightgrey;
+	height: 30px;
+	width:250px;
 	float: left;
-	width: 500px;
+	font-family: 'Rubik', sans-serif;
+	font-size: 15px;
 	text-align: center;
+	padding-top: 8px;
+}
+.login
+{
+	background-color: white;
+	height: 15px;
+	width: 100px;
+	padding: 1px;
+	align: center;
+	border: 2px solid #444444;
+	color: green;
+	font-weight: 700;
+	font-size: 10px;
+	letter-spacing: 1px;
+	float: left;
+	padding-top: 7px;
+}
+.login:hover
+{
+	background-color: silver;
+	cursor: pointer;
+}
+.register
+{
+	background-color: white;
+	height: 15px;
+	width: 100px;
+	padding: 1px;
+	align: center;
+	border: 2px solid #444444;
+	color: red;
+	font-weight: 700;
+	font-size: 10px;
+	letter-spacing: 1px;
+	float: left;
+	padding-top: 5px;
+}
+.register:hover
+{
+	background-color: silver;
+	cursor: pointer;
+}
+#text
+{
+	text-align: center;
+	height: 80px;
+	font-size: 25px;
+	letter-spacing: 5px;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 60px;
+}
+#picture
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right:auto;
 }
 #footer
 {
-	clear:both;
-	width: 1000px;
+	width:960px;
+	margin:20px;
+	font-family: 'Nunito', sans-serif;
 	text-align: center;
-	background-color: #2288BB;
+	font-size: 15px;
 }
