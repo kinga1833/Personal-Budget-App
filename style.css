@@ -2,6 +2,7 @@ body
 {
 	background-color: lightgrey;
 	font-size: 60px;
+	font-family: 'Nunito', sans-serif;
 }
 #container
 {
@@ -12,63 +13,64 @@ body
 #logo
 {
 	width:960px;
-	padding-top: 70px;
+	padding-top: 50px;
 	padding-bottom: 30px;
-	font-family: 'Nunito', sans-serif;
 	text-align: center;
 	letter-spacing: 3px;
 	height: 50px;
 }
-.rectangle
-{
-	background-color: lightgrey;
-	height: 30px;
-	width:250px;
-	float: left;
-	font-family: 'Rubik', sans-serif;
-	font-size: 15px;
-	text-align: center;
-	padding-top: 8px;
-}
 .login
 {
-	background-color: white;
-	height: 15px;
-	width: 100px;
-	padding: 1px;
-	align: center;
-	border: 2px solid #444444;
-	color: green;
+	background-color: #34a21a;
+	color: white;
 	font-weight: 700;
-	font-size: 10px;
+	height: 24px;
+	width: 120px;
+	padding: 1px;
+	font-size: 12px;
 	letter-spacing: 1px;
-	float: left;
-	padding-top: 7px;
+	float: right;
+	padding-top: 6px;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 10px;
 }
 .login:hover
 {
-	background-color: silver;
+	background-color: #36b03c;
 	cursor: pointer;
+}
+a.loginlink
+{
+	color: white;
+	text-decoration: none;
 }
 .register
 {
 	background-color: white;
-	height: 15px;
-	width: 100px;
+	height: 24px;
+	width: 120px;
 	padding: 1px;
-	align: center;
-	border: 2px solid #444444;
 	color: red;
 	font-weight: 700;
-	font-size: 10px;
+	font-size: 12px;
 	letter-spacing: 1px;
-	float: left;
-	padding-top: 5px;
+	float: right;
+	padding-top: 6px;
+	text-align: center;
+	margin-right: 10px;
+	border-radius: 10px;
 }
 .register:hover
 {
-	background-color: silver;
+	background-color: #EEEEEE;
 	cursor: pointer;
+	text-decoration: none;
+}
+a.registerlink
+{
+	color: red;
+	text-decoration: none;
 }
 #text
 {
@@ -89,7 +91,6 @@ body
 {
 	width:960px;
 	margin:20px;
-	font-family: 'Nunito', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
