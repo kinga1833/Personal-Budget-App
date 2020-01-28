@@ -24,10 +24,38 @@
 		</ol>
 	</div>
 	<div id="content">
-		<p>Jak zapewne wiesz, dla wielu osób punktem przełomowym w dziedzinie finansów osobistych było wprowadzenie ewidencji swoich przychodów i wydatków. </p>
-		<p><b>Budżet osobisty</b> to aplikacja stworzona, aby Ci w tym pomóc</p> 
-		<p>Dzięki niej możesz w prosty sposób monitorować swoje finanse, a dzięki temu lepiej nimi zarządzać.</p>
-		<p><b>ZACZNIJ KORZYSTAĆ JUŻ TERAZ!</b></p>
+	<fieldset>
+		<legend>DODAJ PRZYCHÓD:</legend></br>
+			<form action="addincome.php" method="post">
+			
+				<div class="row">
+					<label>Kwota:<input type="number" name="amount" step="0.01"></label></br></br>
+				</div>
+			
+				<div class="row">
+					<label>Data:<input type="date" name="date"></label></br></br>
+				</div>
+			
+				<div class="row">
+					<label for="category">Kategoria:</label>
+						<select id="category">
+							<option value="w">wynagrodzenie</option>
+							<option value="o">odsetki bankowe</option>
+							<option value="s">sprzedaż na allegro</option>
+							<option value="i">inne</option>
+						</select>
+					</br></br>
+				</div>
+				<div class="row">
+					<label>Komentarz (opcjonalnie): <input type="text"name="comment"></label> </br></br>
+				</div>
+				<div class="row">
+					<label><input type="submit" value="Zatwierdź przychód"></label></br>
+				</div>
+			</form>
+	</fieldset>
+		
+		
 	</div>
 	<div id="footer">
 		Autor strony: Kinga Kowal
