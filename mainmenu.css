@@ -78,9 +78,10 @@ ol > li:hover > a
 	width:100%;
 	text-align: center;
 	font-size: 15px;
-	margin-bottom: 10px;
+}
 }
 .row
 {
-	margin: 10px 20px;
+	padding-bottom: 20px;
+	padding-bottom: 20px;
 }

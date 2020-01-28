@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>Budżet osobisty</title>
+	<meta name="description" content="Zacznij panować nad swoimi finansami!"/>
+	<meta name="keywords" content="finanse, pieniadze,budzet" />
+	<link rel="stylesheet" href="mainmenu.css" typ="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Rubik|EB+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="container">
+	<div id="logo">
+		<b><a href="index.html" class="logolink">Budżet osobisty</b></a>
+	</div>
+	<div class="nav">
+		<ol>
+			<li><a href="mainmenu.html">Strona główna</a></li>
+			<li><a href="#">Dodaj przychód</a></li>
+			<li><a href="addexpense.html">Dodaj wydatek</a></li>
+			<li><a href="#">Przeglądaj bilans</a></li>
+			<li><a href="#">Ustawienia</a></li>
+			<li><a href="#">Wyloguj się</a></li>
+		</ol>
+	</div>
+	<div id="content">
+	<fieldset>
+		<legend>DODAJ WYDATEK:</legend></br>
+			<form action="addexpense.php" method="post">
+			
+				<div class="row">
+					<label>Kwota:<input type="number" name="amount" step="0.01"></label></br></br>
+				</div>
+			
+				<div class="row">
+					<label>Data:<input type="date" name="date"></label></br></br>
+				</div>
+			
+				<div class="row">
+					<label for="paymentmethod">Spodób płatności:</label>
+						<select id="paymentmethod">
+							<option value="g">gotówka</option>
+							<option value="kb">karta debetowa</option>
+							<option value="kk">karta kredytowa</option>
+						</select></br></br>
+				</div>
+				
+				<div class="row">
+					Kategoria:
+					<div><label><input type="radio" name="category">Jedzenie</label></div>
+					<div><label><input type="radio" name="category">Mieszkanie</label></div>
+					<div><label><input type="radio" name="category">Transport</label></div>
+					<div><label><input type="radio" name="category">Telekomunikacja</label></div>
+					<div><label><input type="radio" name="category">Opieka zdrowotna</label></div>
+					<div><label><input type="radio" name="category">Ubrania</label></div>
+					<div><label><input type="radio" name="category">Higiena</label></div>
+					<div><label><input type="radio" name="category">Dzieci</label></div>
+					<div><label><input type="radio" name="category">Rozrywka</label></div>
+					<div><label><input type="radio" name="category">Wycieczka</label></div>
+					<div><label><input type="radio" name="category">Szkolenie</label></div>
+					<div><label><input type="radio" name="category">Książki</label></div>
+					<div><label><input type="radio" name="category">Oszczędności</label></div>
+					<div><label><input type="radio" name="category">Na emeryturę</label></div>
+					<div><label><input type="radio" name="category">Spłata długów</label></div>
+					<div><label><input type="radio" name="category">Benzyna</label></div>
+					<div><label><input type="radio" name="category">Inne</label></div></br>
+				</div>
+				
+				<div class="row">
+					<label>Komentarz (opcjonalnie): <input type="text"name="comment"></label></br></br>
+				</div>
+				
+				<div class="row">
+					<label><input type="submit" value="Zatwierdź wydatek"></label></br>
+				</div>
+			</form>
+	</fieldset>
+		
+		
+	</div>
+	<div id="footer">
+		Autor strony: Kinga Kowal
+	</div>	
+</body>
+</html>
