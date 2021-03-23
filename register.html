@@ -2,26 +2,62 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8"/>
-	<title>Budżet osobisty</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>mojeFinanse.pl</title>
 	<meta name="description" content="Zacznij panować nad swoimi finansami!"/>
-	<meta name="keywords" content="finanse, pieniadze,budzet" />
-	<link rel="stylesheet" href="registerstyle.css" typ="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Nunito|Rubik|Open+Sans&display=swap" rel="stylesheet">
+	<meta name="keywords" content="finanse, pieniadze, budzet" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div id="container">
-	<div id="logo">
-		<b><a href="index.html" class="logolink">Budżet osobisty</b></a>
-	</div>
-	<div id="registerwindow">
-		<form>
-			<input type="text" placeholder="imię">
-			<input type="text" placeholder="login">
-			<input type="password" placeholder="hasło">
-			<a href="mainmenu.html"><input type="submit" value="Zarejestruj się"></a>
-		</form>
-	</div>
-	</div>
+	<div class="container">
+		<div class="row">
+			<header>
+				<h1 class="logo">
+					<a href="index.html" class="logolink"><span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span>Finanse.pl</a>
+				</h1>
+				<h3>Aplikacja do zarządzania budżetem osobistym</h3>
+			</header>
+				<section class="mx-auto">
+					<h2>Nowe konto</h2>
+					<div id="subtitle">Utwórz konto, aby w pełni móc korzystać z serwisu.</div>
+					<div class="registerorloginwindow">
+						<form>
+							<div class="input-group">
+								<div class="input-group-prepend"><i class="icon-user icons px-1"></i>
+								<input class="form-control userinput" type="text" placeholder="imię" aria-label="imię"></div>
+							</div>
+							
+							<div class="input-group">
+								<div class="input-group-prepend"><i class="icon-mail-alt icons px-1"></i>
+								<input class="form-control userinput" type="text" placeholder="email" aria-label="email"></div>
+							</div>
+							
+							<div class="input-group">
+								<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
+								<input class="form-control userinput" type="text" placeholder="hasło" aria-label="hasło"></div>
+							</div>
+							
 
+							<div class="input-group">
+								<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
+								<input class="form-control userinput" type="text" placeholder="potwierdź hasło" aria-label=" potwierdź hasło"></div>
+							</div>
+
+							<button class="btn submitregistration" type="submit">Utwórz konto</button>
+						</form>
+					</div>
+				</section>
+		</div>
+		<footer class="footer text-center my-2">
+			Autor strony: Kinga Kowal
+		</footer>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src ="js/bootstrap.min.js"></script>
 </body>
 </html>

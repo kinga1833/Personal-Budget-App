@@ -2,32 +2,58 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8"/>
-	<title>Budżet osobisty</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>mojeFinanse.pl</title>
 	<meta name="description" content="Zacznij panować nad swoimi finansami!"/>
-	<meta name="keywords" content="finanse, pieniadze,budzet" />
-	<link rel="stylesheet" href="style.css" typ="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
+	<meta name="keywords" content="finanse, pieniadze, budzet" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div id="container">
-		<div class="login"><a href="login.html" class="loginlink">Zaloguj się</a></div>
-		<div class="register"><a href="register.html" class="registerlink">Zarejestruj się</a></div>
-			
-		<div style="clear:both;"></div>
-			
-		<div id="logo">
-			<b>Budżet osobisty</b>
+	<div class="container mx-auto">
+		<div class="row">
+			<header class="col-sm-12">
+				<h1 class="logo text-center">
+					<span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span>Finanse.pl
+				</h1>
+				<h3 class="text-center">Aplikacja do zarządzania budżetem osobistym</h3>
+			</header>
+				<main>
+					<div class="square col-md-12 col-lg-6">
+						<ul class="startpagelist mt-5 bg-white">
+							<li><i class="icon-shopping-basket" ></i>Dodawaj swoje przychody i wydatki do aplikacji</li>
+
+							<li><i class="icon-tags"></i>Przypisuj kategorie transakcjom</li>
+									
+							<li><i class="icon-calc "></i>Sprawdzaj różnicę między wydatkami i przychodami</li>
+									
+							<li><i class="icon-chart-pie"></i>Oglądaj bilans na wykresie</li>
+									
+							<li><i class="icon-money"></i>Zacznij oszczędzać! </li>
+						</ul>		
+					</div>
+				
+					<div class="square col-md-12 col-lg-6">
+						<div class="loginRegister mt-5 bg-white">Nie masz konta?<br />
+							<div class="register"><a href="register.html" class="registerlink"><i class="icon-user-plus"></i>Zarejestruj się</a></div>
+						</div>
+						<div class="loginRegister mt-5 bg-white">Masz już konto?<br />
+							<div class="login"><a href="login.html" class="loginlink"><i class="icon-login"></i> Zaloguj się</a></div>
+						</div>
+					</div>
+				</main>
 		</div>
 		
-		<div id="text">
-			<i>Zacznij panować na swoimi finansami już dziś!</i></div>
-		<div id="picture">
-			<img src="zdjecie.png">
-		</div>
-		
-		<div id="footer">
+		<footer class="footer text-center my-2">
 			Autor strony: Kinga Kowal
-		</div>	
+		</footer>
 	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src ="js/bootstrap.min.js"></script>
 </body>
 </html>

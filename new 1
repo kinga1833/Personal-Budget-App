@@ -1,0 +1,169 @@
+róz jaś #deb4cb
+róż ciem #cda3bc
+gran jas #082e79
+gran ciem #060d57
+kółka szary #bdbebd
+
+.block
+{
+	background-color: #060d57;
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	padding: 10px;
+	padding-bottom: 15px;
+	text-align: center;
+	text-decoration: bold;
+	width: 180px;
+	margin: 30px;
+	margin-top: 10px;
+	float: left;
+	height: 180px;
+	border-radius: 150px;
+	-webkit-box-shadow: 3px 3px 15px 5px rgba(204,204,204,1);
+	-moz-box-shadow: 3px 3px 15px 5px rgba(204,204,204,1);
+	box-shadow: 3px 3px 15px 5px rgba(204,204,204,1);
+}
+
+<div class = "block">
+				<i class="icon-tags"></i><br/>Przypisuj kategorie transakcjom
+			</div>
+			<div class = "block">
+				<i class="icon-calc"></i><br/>Sprawdzaj różnicę między wydatkami i przychodami
+			</div>
+			<div class = "block">
+				<i class="icon-chart-pie"></i><br/>Oglądaj bilans na wykresie
+			</div>
+			<div class = "block">
+				<i class="icon-money"></i><br/>Zacznij oszczędzać! 
+			</div>
+			
+			
+<div id="registerorloginwindow">
+		<form>
+			<input type="textlogin" placeholder="login">
+			<input type="passwordlogin" placeholder="hasło">
+			<a href="mainmenu.html"><input type="submitlogin"value="Zaloguj się"></a>
+		</form>
+		</div>
+		
+
+.navbar
+{
+	width: 100%;
+	height: 60px;
+	padding: 0;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: #060d57;
+	text-align: center;
+}
+.nav-item
+{
+	color: white;
+	
+}
+.navbar > ol
+{
+	padding: 5px;
+	margin-top: 10px;
+	margin-top: 10px;
+	height: 40px;
+	list-style-type: none;
+	font-size: 18px;
+	display: inline-block;
+	text-decoration: none;
+}
+.navbar > ol a
+{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+}
+.navbar > ol > li
+{
+	float: left;
+	width: 300px;
+	text-decoration: none;
+}
+.navbar >ol > li > a > i
+{
+	font-size: 20px;
+	margin-right : 15px;
+}
+.navbar > ol > li:hover
+{
+	background-color: #082e79;
+	border-radius: 5px;
+	text-decoration: none;
+	-webkit-box-shadow: 0px 0px 10px 2px grey;
+	-moz-box-shadow: 0px 0px 10px 2px grey;
+	box-shadow: 0px 0px 10px 2px grey;
+}
+.navbar > ol > li > ul
+{
+	list-style-type: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none;
+}
+.navbar > ol > li:hover > ul
+{
+	display: block;
+	text-decoration: none;
+}
+nav >ol > li > ul > li > a
+{
+    background-color: #082e79 ;
+}
+nav >ol > li > ul > li:hover > a
+{
+    color: #082e79;
+	background-color: #e9e9e9;
+}
+
+
+<nav class="navbar navbar-dark navbar-expand-lg">
+			
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="mainmenu" aria-controls="mainmenu" aria-expamded="false" aria-label="Przełącznik nawigacji">
+					<span class="icon-menu-1"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainmenu">
+				
+					<ul class="navbar-nav">
+					
+						<li class="nav-item disabled">
+							<a class="nav-link" href="mainmenu.html"><i class="icon-home mr-2"></i>Strona główna</a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="icon-money mr-2"></i>Dodaj przychód</a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="addexpense.html"><i class="icon-shopping-basket mr-2"></i>Dodaj wydatek</a>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#"><i class="icon-chart-pie mr-2"></i>Przeglądaj bilans</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="viewbalance.html">bieżący miesiąc</a>
+								<a class="dropdown-item" href="viewbalance.html">poprzedni miesiąc</a>
+								<a class="dropdown-item" href="viewbalance.html">bieżący rok</a>
+								<a class="dropdown-item" href="viewbalance.html">niestandardowy</a>
+							</div>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="icon-cog mr-2"></i>Ustawienia</a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="index.html"><i class="icon-logout mr-2"></i>Wyloguj się</a>
+						</li>
+					</ul>
+				</div>	
+			</nav>

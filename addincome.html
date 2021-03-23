@@ -29,11 +29,11 @@
 					 
 					<ul class="navbar-nav mx-auto bg-white mt-3">
 					
-						<li class="col-lg-2 ml-1 nav-item active">
+						<li class="col-lg-2 ml-1 nav-item">
 							<a class="nav-link" href="mainmenu.html"><i class="icon-home mr-2"></i>Strona główna</a>
 						</li>
 							
-						<li class="col-lg-2 nav-item">
+						<li class="col-lg-2 nav-item active">
 							<a class="nav-link" href="addincome.html"><i class="icon-money mr-2"></i>Dodaj przychód</a>
 						</li>
 							
@@ -63,23 +63,50 @@
 				</div>
 			</nav>
 		</header>
-		<main 
-			<div class="mx-auto px-2">
-				<div class="row justify-content-around align-self-center">
-					<figure>
-						<figcaption>
-							<b>Zacznij korzystać z aplikacji</b>
-						</figcaption>
-						<div class="registerorloginwindow"><img class="img-fluid col-sm-12" src="img/budzet.png" alt=""> </div>
-					</figure>
+		<section class="mx-auto px-3">
+			<div class="row">
+				<div class="addoperation text-center mx-auto my-5 pt-4 bg-white col-sm-10 col-md-7 col-lg-5 ">
+					<h4 class="font-weight-bold">DODAJ PRZYCHÓD</h4>
+					<form>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text ">Kwota</span>
+								<input class="form-control" type="number" name="kwota" step="0.01" value="" required="">
+							</div>
+							<div class="input-group-prepend mt-3">
+								<span class="input-group-text ">Data</span>
+								<input class="form-control" type="date" name="data" value="" required="">
+							</div>
+							<div class="input-group-prepend mt-3">
+								<span class="input-group-text ">Kategoria</span>
+									<select class="form-control" name="kategoria" required="">
+										<option value="" disabled="" selected="" hidden="">wybierz kategorię</option>
+										<option>wynagrodzenie</option>
+										<option>odsetki</option>
+										<option>sprzedaż na allego</option>
+										<option>inna</option>
+									</select>
+							</div>
+							<div class="input-group-prepend mt-3">
+								<span class="input-group-text ">Komentarz <br>(opcjonalnie) </span>
+								<textarea class="form-control" name="komentarz" maxlength="100" rows="4"></textarea>
+							</div>
+							<div class="mt-4 mx-auto">	
+								<button class="btn mr-4" type="submit">	
+									Dodaj
+								</button>
+								<button class="btn submitbutton">
+									Anuluj
+								</button>
+							</div>
+						</div>
+					</form>
 				</div>
-			</div>			
-		</main>
-
+			</div>
+		</section>
 		<footer class="footer text-center my-2">
 			Autor strony: Kinga Kowal
 		</footer>
-
 	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
