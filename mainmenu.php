@@ -1,3 +1,8 @@
+<?php
+	
+	session_start();
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -63,12 +68,17 @@
 				</div>
 			</nav>
 		</header>
-		<main 
+		<main>
 			<div class="mx-auto px-2">
 				<div class="row justify-content-around align-self-center">
 					<figure>
+				
 						<figcaption>
-							<b>Zacznij korzystać z aplikacji</b>
+<?php
+	echo "<p>Witaj ".$_SESSION['username']."!";
+?>
+
+						<p>Zacznij korzystać z aplikacji</p>
 						</figcaption>
 						<div class="registerorloginwindow"><img class="img-fluid col-sm-12" src="img/budzet.png" alt=""> </div>
 					</figure>
