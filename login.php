@@ -25,13 +25,16 @@
 				$row =$result->fetch_assoc();
 				$_SESSION['username'] =$row['username'];
 				
+				unset($_SESSION['fail']);
 				$result->free_result();
 				
 				header('Location:mainmenu.php');
 			}
 			else
 			{
+				$_SESSION['fail'] = '<span style ="color:red">Nieprawidłowy login lub hasło!</span>';
 				
+				header('Location:loginsite.php');
 			}
 		}
 		

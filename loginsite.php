@@ -1,3 +1,8 @@
+<?php
+	
+	session_start();
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -35,6 +40,10 @@
 							<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
 							<input class="form-control userinput" type="password" name="password" placeholder="hasło" aria-label="hasło"></div>
 						</div>
+						
+						<?php
+							if(isset($_SESSION['fail'])) echo $_SESSION['fail']."</br>";
+						?>
 							
 						<button class="submitlogin" type="submit">Zaloguj się</button>
 					</form>
