@@ -1,3 +1,14 @@
+<?php
+	
+	session_start();
+	
+	if(!isset($_SESSION['signed_in']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -57,18 +68,23 @@
 						</li>
 							
 						<li class="col-lg-2 mr-1 nav-item">
-							<a class="nav-link" href="index.html"><i class="icon-logout mr-2"></i>Wyloguj się</a>
+							<a class="nav-link" href="logout.php"><i class="icon-logout mr-2"></i>Wyloguj się</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
-		<main 
+		<main>
 			<div class="mx-auto px-2">
 				<div class="row justify-content-around align-self-center">
 					<figure>
+				
 						<figcaption>
-							<b>Zacznij korzystać z aplikacji</b>
+<?php
+	echo "<p>Witaj ".$_SESSION['username']."!";
+?>
+
+						<p>Zacznij korzystać z aplikacji</p>
 						</figcaption>
 						<div class="registerorloginwindow"><img class="img-fluid col-sm-12" src="img/budzet.png" alt=""> </div>
 					</figure>

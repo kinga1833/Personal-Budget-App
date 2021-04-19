@@ -1,3 +1,14 @@
+<?php
+
+	session_start();
+	
+	if((isset($_SESSION['signed_in'])) && ($_SESSION['signed_in']==true))
+	{
+		header('Location:mainmenu.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -21,8 +32,7 @@
 				</h1>
 				<h3 class="text-center">Aplikacja do zarządzania budżetem osobistym</h3>
 			</header>
-				<main>
-					<div class="square col-md-12 col-lg-6">
+					<div class="square col-md-12 col-lg-7">
 						<ul class="startpagelist mt-5 bg-white">
 							<li><i class="icon-shopping-basket" ></i>Dodawaj swoje przychody i wydatki do aplikacji</li>
 
@@ -36,15 +46,14 @@
 						</ul>		
 					</div>
 				
-					<div class="square col-md-12 col-lg-6">
+					<div class="square col-md-12 col-lg-5">
 						<div class="loginRegister mt-5 bg-white">Nie masz konta?<br />
 							<div class="register"><a href="register.html" class="registerlink"><i class="icon-user-plus"></i>Zarejestruj się</a></div>
 						</div>
 						<div class="loginRegister mt-5 bg-white">Masz już konto?<br />
-							<div class="login"><a href="login.html" class="loginlink"><i class="icon-login"></i> Zaloguj się</a></div>
+							<div class="login"><a href="loginsite.php" class="loginlink"><i class="icon-login"></i> Zaloguj się</a></div>
 						</div>
 					</div>
-				</main>
 		</div>
 		
 		<footer class="footer text-center my-2">

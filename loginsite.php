@@ -1,3 +1,8 @@
+<?php
+	
+	session_start();
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -24,16 +29,21 @@
 				<h2>Logowanie</h2>
 				<div id="subtitle">Zaloguj się, aby uzyskać dostęp do swojego konta.</div>
 				<div class="registerorloginwindow">
-					<form>
+				
+					<form action="login.php" method="post">
 						<div class="input-group">
 							<div class="input-group-prepend"><i class="icon-mail-alt icons px-1"></i>
-							<input class="form-control userinput" type="text" placeholder="imię" aria-label="imię"></div>
+							<input class="form-control userinput" type="text" name="login" placeholder="e-mail" aria-label="e-mail"></div>
 						</div>
 						
 						<div class="input-group">
 							<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
-							<input class="form-control userinput" type="text" placeholder="hasło" aria-label="hasło"></div>
+							<input class="form-control userinput" type="password" name="password" placeholder="hasło" aria-label="hasło"></div>
 						</div>
+						
+						<?php
+							if(isset($_SESSION['fail'])) echo $_SESSION['fail']."</br>";
+						?>
 							
 						<button class="submitlogin" type="submit">Zaloguj się</button>
 					</form>
