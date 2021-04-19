@@ -1,3 +1,14 @@
+<?php
+
+	session_start();
+	
+	if((isset($_SESSION['signed_in'])) && ($_SESSION['signed_in']==true))
+	{
+		header('Location:mainmenu.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>

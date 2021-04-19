@@ -1,6 +1,12 @@
 <?php
 	
 	session_start();
+	
+	if(!isset($_SESSION['signed_in']))
+	{
+		header('Location: index.php');
+		exit();
+	}
 ?>
 
 <!DOCTYPE HTML>
@@ -62,7 +68,7 @@
 						</li>
 							
 						<li class="col-lg-2 mr-1 nav-item">
-							<a class="nav-link" href="index.html"><i class="icon-logout mr-2"></i>Wyloguj się</a>
+							<a class="nav-link" href="logout.php"><i class="icon-logout mr-2"></i>Wyloguj się</a>
 						</li>
 					</ul>
 				</div>
