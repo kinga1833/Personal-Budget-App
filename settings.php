@@ -30,34 +30,35 @@
 					<ul class="navbar-nav mx-auto bg-white mt-3">
 					
 						<li class="col-lg-2 ml-1 nav-item">
-							<a class="nav-link" href="mainmenu.html"><i class="icon-home mr-2"></i>Strona główna</a>
+							<a class="nav-link" href="mainmenu.php"><i class="icon-home mr-2"></i>Strona główna</a>
 						</li>
 							
 						<li class="col-lg-2 nav-item">
-							<a class="nav-link" href="addincome.html"><i class="icon-money mr-2"></i>Dodaj przychód</a>
+							<a class="nav-link" href="addincome.php"><i class="icon-money mr-2"></i>Dodaj przychód</a>
 						</li>
 							
 						<li class="col-lg-2 nav-item">
-							<a class="nav-link" href="addexpense.html"><i class="icon-shopping-basket mr-2"></i>Dodaj wydatek</a>
+							<a class="nav-link" href="addexpense.php"><i class="icon-shopping-basket mr-2"></i>Dodaj wydatek</a>
 						</li>
 							
 						<li class="col-lg-2 nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"><i class="icon-chart-pie mr-2"></i>Przeglądaj bilans</a>
 							
 							<div class="dropdown-menu" aria-labelledby="submenu">
-								<a class="dropdown-item " href="viewbalance.html">bieżący miesiąc</a>
-								<a class="dropdown-item " href="viewbalance.html">poprzedni miesiąc</a>
-								<a class="dropdown-item " href="viewbalance.html">bieżący rok</a>
-								<a class="dropdown-item " href="viewbalance.html">niestandardowy</a>
+								<a class="dropdown-item " href="showbalance-currentmonth
+								.php">bieżący miesiąc</a>
+								<a class="dropdown-item " href="showbalance-lastmonth.php">poprzedni miesiąc</a>
+								<a class="dropdown-item " href="showbalance-currentyear.php">bieżący rok</a>
+								<a class="dropdown-item " href="showbalance-custom.php">niestandardowy</a>
 							</div>
 						</li>
 							
 						<li class="col-lg-2 nav-item">
-							<a class="nav-link" href="settings.html"><i class="icon-cog mr-2"></i>Ustawienia</a>
+							<a class="nav-link" href="settings.php"><i class="icon-cog mr-2"></i>Ustawienia</a>
 						</li>
 							
 						<li class="col-lg-2 mr-1 nav-item">
-							<a class="nav-link" href="index.html"><i class="icon-logout mr-2"></i>Wyloguj się</a>
+							<a class="nav-link" href="logout.php"><i class="icon-logout mr-2"></i>Wyloguj się</a>
 						</li>
 					</ul>
 				</div>
