@@ -7,6 +7,10 @@
 		header('Location:mainmenu.php');
 		exit();
 	}
+	if(isset($_SESSION['fail']))
+	{
+		unset($_SESSION['fail']);
+	}
 ?>
 
 <!DOCTYPE HTML>
@@ -48,7 +52,7 @@
 				
 					<div class="square col-md-12 col-lg-5">
 						<div class="loginRegister mt-5 bg-white">Nie masz konta?<br />
-							<div class="register"><a href="register.html" class="registerlink"><i class="icon-user-plus"></i>Zarejestruj się</a></div>
+							<div class="register"><a href="register.php" class="registerlink"><i class="icon-user-plus"></i>Zarejestruj się</a></div>
 						</div>
 						<div class="loginRegister mt-5 bg-white">Masz już konto?<br />
 							<div class="login"><a href="loginsite.php" class="loginlink"><i class="icon-login"></i> Zaloguj się</a></div>

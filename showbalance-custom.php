@@ -1,14 +1,3 @@
-<?php
-	
-	session_start();
-	
-	if(!isset($_SESSION['signed_in']))
-	{
-		header('Location: index.php');
-		exit();
-	}
-?>
-
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -40,7 +29,7 @@
 					 
 					<ul class="navbar-nav mx-auto bg-white mt-3">
 					
-						<li class="col-lg-2 ml-1 nav-item active">
+						<li class="col-lg-2 ml-1 nav-item">
 							<a class="nav-link" href="mainmenu.php"><i class="icon-home mr-2"></i>Strona główna</a>
 						</li>
 							
@@ -52,10 +41,11 @@
 							<a class="nav-link" href="addexpense.php"><i class="icon-shopping-basket mr-2"></i>Dodaj wydatek</a>
 						</li>
 							
-						<li class="col-lg-2 nav-item dropdown">
+						<li class="col-lg-2 nav-item dropdown active">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"><i class="icon-chart-pie mr-2"></i>Przeglądaj bilans</a>
 							
-							<div class="dropdown-menu" aria-labelledby="submenu">
+							
+							<div class="dropdown-menu m-0 p-0" aria-labelledby="submenu">
 								<a class="dropdown-item " href="showbalance-currentmonth.php">bieżący miesiąc</a>
 								<a class="dropdown-item " href="showbalance-lastmonth.php">poprzedni miesiąc</a>
 								<a class="dropdown-item " href="showbalance-currentyear.php">bieżący rok</a>
@@ -74,32 +64,30 @@
 				</div>
 			</nav>
 		</header>
-		<main>
-			<div class="mx-auto px-2">
-				<div class="row justify-content-around align-self-center">
-					<figure>
-				
-						<figcaption>
-<?php
-	echo "<p>Witaj ".$_SESSION['username']."!";
-?>
-
-						<p>Zacznij korzystać z aplikacji</p>
-						</figcaption>
-						<div class="registerorloginwindow"><img class="img-fluid col-sm-12" src="img/budzet.png" alt=""> </div>
-					</figure>
+			<section class="mx-auto px-2">
+				<div class="row">
+					<div class="addoperation text-center py-4 my-5 mx-auto bg-white col-lg-6">
+						<h4 class="font-weight-bold mb-3">PRZEGLĄDAJ BILANS</h4>
+						<p>Wybierz przedział czasowy</p>
+						<div class="beginendperiod my-2 py-2">
+							<form action="showbalance-customaction.php" method="post">
+								Od
+								<input type="date" name="startdate" class="ml-2 mr-4 my-3 col-md-3"/>
+							
+								Do
+								<input type="date" name="enddate" class="ml-2 mr-4 my-3 col-md-3"/></br>
+								<input type ="submit" value="Zatwierdź" class="btn my-4">
+							</form>
+						</div>
+					</div>
 				</div>
-			</div>			
-		</main>
-
-		<footer class="footer text-center my-2">
+				<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+				<script src ="js/bootstrap.min.js"></script>
+			</section>
+		<footer class="text-center my-2">
 			Autor strony: Kinga Kowal
 		</footer>
-
-	</div>
 	
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src ="js/bootstrap.min.js"></script>
 </body>
 </html>

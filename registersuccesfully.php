@@ -1,6 +1,17 @@
 <?php
 	
 	session_start();
+	
+	if(isset($_POST['registersuccesfully']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+	else
+	{
+		unset($_SESSION['udanarejestracja']);
+	}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -25,32 +36,13 @@
 				</h1>
 				<h3>Aplikacja do zarządzania budżetem osobistym</h3>
 			</header>
-			<section class="mx-auto">
-				<h2>Logowanie</h2>
-				<div id="subtitle">Zaloguj się, aby uzyskać dostęp do swojego konta.</div>
-				<div class="registerorloginwindow">
+				<div class="registersuccesfully mx-auto px-5 py-7 mt-5">
+				Udana rejestracja!<br />
+				Możesz już zalogować się stronie <b>mojeFinanse.pl<b>!
 				
-					<form action="login.php" method="post">
-					
-						<div class="input-group">
-							<div class="input-group-prepend"><i class="icon-mail-alt icons px-1"></i>
-							<input class="form-control userinput" type="text"" name="email" placeholder="e-mail" aria-label="e-mail"></div>
-						</div>
-						
-						<div class="input-group">
-							<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
-							<input class="form-control userinput" type="password" name="password" placeholder="hasło" aria-label="hasło"></div>
-						</div>
-						
-						<?php
-							if(isset($_SESSION['fail'])) echo $_SESSION['fail']."</br>";
-						?>
-							
-						<button class="submitlogin" type="submit">Zaloguj się</button>
-					</form>
+					<div class="login mb-2"><a href="loginsite.php" class="loginlink"><i class="icon-login"></i> Zaloguj się</a></div>
+				
 				</div>
-			</section>
-		</div>
 		<footer class="footer text-center my-2">
 			Autor strony: Kinga Kowal
 		</footer>

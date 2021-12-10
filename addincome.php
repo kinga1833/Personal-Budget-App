@@ -1,9 +1,20 @@
+<?php
+	
+	session_start();
+	
+	if(!isset($_SESSION['signed_in']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>mojeFinanse.pl</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Zacznij panować nad swoimi finansami!"/>
 	<meta name="keywords" content="finanse, pieniadze,budzet" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -30,96 +41,77 @@
 					<ul class="navbar-nav mx-auto bg-white mt-3">
 					
 						<li class="col-lg-2 ml-1 nav-item">
-							<a class="nav-link" href="mainmenu.html"><i class="icon-home mr-2"></i>Strona główna</a>
-						</li>
-							
-						<li class="col-lg-2 nav-item">
-							<a class="nav-link" href="addincome.html"><i class="icon-money mr-2"></i>Dodaj przychód</a>
+							<a class="nav-link" href="mainmenu.php"><i class="icon-home mr-2"></i>Strona główna</a>
 						</li>
 							
 						<li class="col-lg-2 nav-item active">
-							<a class="nav-link" href="addexpense.html"><i class="icon-shopping-basket mr-2"></i>Dodaj wydatek</a>
+							<a class="nav-link" href="addincome.php"><i class="icon-money mr-2"></i>Dodaj przychód</a>
+						</li>
+							
+						<li class="col-lg-2 nav-item">
+							<a class="nav-link" href="addexpense.php"><i class="icon-shopping-basket mr-2"></i>Dodaj wydatek</a>
 						</li>
 							
 						<li class="col-lg-2 nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"><i class="icon-chart-pie mr-2"></i>Przeglądaj bilans</a>
 							
 							<div class="dropdown-menu" aria-labelledby="submenu">
-								<a class="dropdown-item " href="viewbalance.html">bieżący miesiąc</a>
-								<a class="dropdown-item " href="viewbalance.html">poprzedni miesiąc</a>
-								<a class="dropdown-item " href="viewbalance.html">bieżący rok</a>
-								<a class="dropdown-item " href="viewbalance.html">niestandardowy</a>
+								<a class="dropdown-item " href="showbalance-currentmonth
+								.php">bieżący miesiąc</a>
+								<a class="dropdown-item " href="showbalance-lastmonth.php">poprzedni miesiąc</a>
+								<a class="dropdown-item " href="showbalance-currentyear.php">bieżący rok</a>
+								<a class="dropdown-item " href="showbalance-custom.php">niestandardowy</a>
 							</div>
 						</li>
 							
 						<li class="col-lg-2 nav-item">
-							<a class="nav-link" href="settings.html"><i class="icon-cog mr-2"></i>Ustawienia</a>
+							<a class="nav-link" href="settings.php"><i class="icon-cog mr-2"></i>Ustawienia</a>
 						</li>
 							
 						<li class="col-lg-2 mr-1 nav-item">
-							<a class="nav-link" href="index.html"><i class="icon-logout mr-2"></i>Wyloguj się</a>
+							<a class="nav-link" href="logout.php"><i class="icon-logout mr-2"></i>Wyloguj się</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
-		<section class="mx-auto px-2">
+		<section class="mx-auto px-3">
 			<div class="row">
 				<div class="addoperation text-center mx-auto my-5 pt-4 bg-white col-sm-10 col-md-7 col-lg-5 ">
-					<h4 class="font-weight-bold">DODAJ WYDATEK</h4>
-					<form>
+					<h4 class="font-weight-bold">DODAJ PRZYCHÓD</h4>
+					
+					
+					<form action="addincomeaction.php" method="post">
+					
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text ">Kwota</span>
-								<input class="form-control" type="number" name="kwota" step="0.01" value="" required="">
+								<input class="form-control" type="number" name="amount" step="0.01" value="" required="">
 							</div>
+							
 							<div class="input-group-prepend mt-3">
 								<span class="input-group-text ">Data</span>
-								<input class="form-control" type="date" name="data" value="" required="">
-							</div>
-							<div class="input-group-prepend mt-3">
-								<span class="input-group-text ">Sposób płatności</span>
-									<select class="form-control" name="kategoria" required="">
-										<option value="" disabled="" selected="" hidden="">wybierz kategorię</option>
-										<option>gotówka</option>
-										<option>karta kredytowa</option>
-										<option>karta debetowa</option>
-										<option>blik</option>
-										<option>Bitcoin</option>
-									</select>
+								<input class="form-control" type="date" name="date" value="" required="">
 							</div>
 							<div class="input-group-prepend mt-3">
 								<span class="input-group-text ">Kategoria</span>
-									<select class="form-control" name="kategoria" required="">
+									<select class="form-control" name="category" required="">
 										<option value="" disabled="" selected="" hidden="">wybierz kategorię</option>
-										<option>jedzenie</option>
-										<option>mieszkanie</option>
-										<option>transport</option>
-										<option>telekominikacja</option>
-										<option>opieka zdrowotna</option>
-										<option>ubranie</option>
-										<option>higiena</option>
-										<option>dzieci</option>
-										<option>rozrywka</option>
-										<option>wycieczka</option>
-										<option>szkolenia</option>
-										<option>książki</option>
-										<option>oszczędności</option>
-										<option>na emeryturę</option>
-										<option>spłata długów</option>
-										<option>darowizna</option>
-										<option>inne wydatki</option>
+										<option>wynagrodzenie</option>
+										<option>odsetki</option>
+										<option>sprzedaż na allego</option>
+										<option>inna</option>
 									</select>
 							</div>
 							<div class="input-group-prepend mt-3">
-								<span class="input-group-text ">Komentarz <br> (opcjonalnie)</span>
-								<textarea class="form-control" name="komentarz" maxlength="100" rows="4"></textarea>
+								<span class="input-group-text ">Komentarz <br>(opcjonalnie) </span>
+								<textarea class="form-control" name="comment" maxlength="100" rows="4"></textarea>
 							</div>
 							<div class="mt-4 mx-auto">	
 								<button class="btn mr-4" type="submit">	
 									Dodaj
 								</button>
-								<button class="btn">
+								<button class="btn submitbutton">
 									Anuluj
 								</button>
 							</div>
@@ -127,15 +119,14 @@
 					</form>
 				</div>
 			</div>
-	
-	</section>
-	<footer class="footer text-center my-2">
-		Autor strony: Kinga Kowal
-	</footer>
-	
+		</section>
+		<footer class="footer text-center my-2">
+			Autor strony: Kinga Kowal
+		</footer>
 	</div>
+	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src ="js/bootstrap.min.js"></script>	
+	<script src ="js/bootstrap.min.js"></script>
 </body>
 </html>
