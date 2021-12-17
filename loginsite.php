@@ -18,26 +18,26 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
 			<header>
-				<h1 class="logo">
-					<a href="index.php" class="logolink"><span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span>Finanse.pl</a>
+				<h1 class="logo text-center">
+					<div style="display:inline-block"><span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span></div><div style="display:inline-block">Finanse.pl</div>
 				</h1>
 				<h3>Aplikacja do zarządzania budżetem osobistym</h3>
 			</header>
-			<section class="mx-auto">
+		<div class="row">
+			<section class="mx-auto col-12 col-sm-10 col-md-8 col-lg-6">
 				<h2>Logowanie</h2>
 				<div id="subtitle">Zaloguj się, aby uzyskać dostęp do swojego konta.</div>
-				<div class="registerorloginwindow">
+				<div class="registerorloginwindow px-0">
 				
 					<form action="login.php" method="post">
 					
-						<div class="input-group">
+						<div class="input-group mx-auto col-12 col-sm-10">
 							<div class="input-group-prepend"><i class="icon-mail-alt icons px-1"></i>
-							<input class="form-control userinput" type="text"" name="email" placeholder="e-mail" aria-label="e-mail"></div>
+							<input class="form-control  userinput " type="text"" name="email" placeholder="e-mail" aria-label="e-mail"></div>
 						</div>
 						
-						<div class="input-group">
+						<div class="input-group mx-auto col-12 col-sm-10">
 							<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
 							<input class="form-control userinput" type="password" name="password" placeholder="hasło" aria-label="hasło"></div>
 						</div>
@@ -46,15 +46,15 @@
 							if(isset($_SESSION['fail'])) echo $_SESSION['fail']."</br>";
 						?>
 							
-						<button class="submitlogin" type="submit">Zaloguj się</button>
+						<button class="submitlogin mx-auto col-12 col-sm-10 col-md-8 col-lg-6" type="submit">Zaloguj się</button>
 					</form>
 				</div>
 			</section>
 		</div>
-		<footer class="footer text-center my-2">
-			Autor strony: Kinga Kowal
-		</footer>
 	</div>
+	<footer>
+		<div class="footer text-center my-2">2021 © Kinga Kowal</div>
+	</footer>
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

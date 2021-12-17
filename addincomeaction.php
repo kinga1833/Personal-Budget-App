@@ -1,12 +1,6 @@
 <?php
-	
+
 	session_start();
-	
-	if(!isset($_SESSION['signed_in']))
-	{
-		header('Location: index.php');
-		exit();
-	}
 	require_once "connect.php";
 	
 	$connection = new mysqli($host, $db_user, $db_password, $db_name);
@@ -23,6 +17,8 @@
 		$category = $_POST['category'];
 		$comment = $_POST['comment'];
 		$userid = $_SESSION['id'];
+		
+		mysqli_set_charset($connection, "utf8");
 		$result = $connection->query("SELECT * FROM incomes_category_assigned_to_users WHERE incomes_category_assigned_to_users.user_id = '$userid' AND incomes_category_assigned_to_users.name = '$category'");
 		$row =$result->fetch_assoc();
 		$categoryid = $row['id'];
@@ -40,5 +36,4 @@
 		}
 	}
 
-	$connection->close();
 ?>

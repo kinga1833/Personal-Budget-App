@@ -10,7 +10,7 @@ html, body
 .container
 {
 	width: 100%;
-	min-height:100%;
+	min-height:calc100%;
 	position:relative;
 }
 header
@@ -38,8 +38,9 @@ h3
 }
 .footer
 {
+	padding: 15px 0 0;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 }
 .startpagelist
@@ -153,7 +154,7 @@ h2
 }
 form
 { 
-	padding: 20px 60px;
+	padding: 20px 20px;
 	text-align: center;
 
 }

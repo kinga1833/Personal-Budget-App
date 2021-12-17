@@ -1,3 +1,15 @@
+<?php
+	
+	session_start();
+	
+	if(!isset($_SESSION['signed_in']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+	
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -15,7 +27,7 @@
 	<div class="container-fluid">
 		<header>
 			<h1 class="logo">
-				<span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span>Finanse.pl
+				<div style="display:inline-block"><span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span></div><div style="display:inline-block">Finanse.pl</div>
 			</h1>
 			<h3>Aplikacja do zarządzania budżetem osobistym</h3>
 	
@@ -67,7 +79,7 @@
 		</header>
 			<section class="mx-auto px-2">
 				<div class="row">
-					<div class="addoperation text-center py-4 my-5 mx-auto bg-white col-lg-6">
+					<div class="addoperation text-center py-4 my-5 mx-auto bg-white col-md-10 col-lg-8">
 						<h4 class="font-weight-bold">PRZEGLĄDAJ BILANS</h4>
 						<p>Bieżący miesiąc<p>
 						<div class="table1 col-md-8 mt-3 mx-auto">
@@ -79,14 +91,6 @@
 								</thead>
 								<tbody>
 <?php
-	
-	session_start();
-	
-	if(!isset($_SESSION['signed_in']))
-	{
-		header('Location: index.php');
-		exit();
-	}
 	
 	$beginOfPeriod = date('Y-m-01');
 	$endOfPeriod = date('Y-m-t');
@@ -107,15 +111,15 @@
 		echo'<tr><td class="tablesubtitle">Data</td><td class="tablesubtitle">Kategoria</td><td class="tablesubtitle">Kwota</td></tr>';
 			
 			$incomeGenerallySQL = $connection->query("SELECT i.date_of_income, ic.name, SUM(i.amount) FROM incomes AS i, incomes_category_assigned_to_users AS ic WHERE i.user_id='$userid' AND ic.user_id='$userid' AND ic.id=i.income_category_assigned_to_user_id AND i.date_of_income BETWEEN '$beginOfPeriod' AND '$endOfPeriod' GROUP BY income_category_assigned_to_user_id");
-			$incomeSQL = $incomeGenerallySQL-> fetch_all(MYSQLI_ASSOC);
+			$incomesSQL = $incomeGenerallySQL-> fetch_all(MYSQLI_ASSOC);
 			
 			$incomesSum = 0;
-			foreach($incomeSQL as $incomesSQL)
+			foreach($incomesSQL as $incomeSQL)
 			{
-				echo '<tr><td>'.$incomesSQL['date_of_income']." PLN </td>";
-				echo '<td>'.$incomesSQL['name']." PLN </td>";
-				echo '<td>'.$incomesSQL['SUM(i.amount)']." PLN </br></td></tr>";
-				$incomesSum += $incomesSQL['SUM(i.amount)'];
+				echo '<tr><td>'.$incomeSQL['date_of_income']."</td>";
+				echo '<td>'.$incomeSQL['name']."</td>";
+				echo '<td>'.$incomeSQL['SUM(i.amount)']." PLN </br></td></tr>";
+				$incomesSum += $incomeSQL['SUM(i.amount)'];
 			}
 			echo '<td class="tablesubtitle" colspan="2">SUMA</td><td><b>'.$incomesSum.' PLN </b></td></tr>';
 ?>					
@@ -134,14 +138,15 @@
 									<tr><td class="tablesubtitle">Data</td><td class="tablesubtitle">Kategorie</td><td class="tablesubtitle">Kwota</td></tr>
 <?php
 	$expenseGenerallySQL = $connection->query("SELECT e.date_of_expense, ex.name, SUM(e.amount) FROM expenses AS e, expenses_category_assigned_to_users AS ex WHERE e.user_id='$userid' AND ex.user_id='$userid' AND ex.id=e.expense_category_assigned_to_user_id AND e.date_of_expense BETWEEN '$beginOfPeriod' AND '$endOfPeriod' GROUP BY expense_category_assigned_to_user_id");
-			$expenseSQL = $expenseGenerallySQL-> fetch_all(MYSQLI_ASSOC);
+			$expensesSQL = $expenseGenerallySQL-> fetch_all(MYSQLI_ASSOC);
 			$expensesSum = 0;
-			foreach($expenseSQL as $expensesSQL)
+			echo "kaka</br>";
+			foreach($expensesSQL as $expenseSQL)
 			{
-				echo '<tr><td>'.$expensesSQL['date_of_expense']." PLN </td>";
-				echo '<td>'.$expensesSQL['name']." PLN </td>";
-				echo '<td>'.$expensesSQL['SUM(e.amount)']." PLN </br></td></tr>";
-				$expensesSum +=$expensesSQL['SUM(e.amount)'];
+				echo '<tr><td>'.$expenseSQL['date_of_expense']."</td>";
+				echo '<td>'.$expenseSQL['name']."</td>";
+				echo '<td>'.$expenseSQL['SUM(e.amount)']." PLN </br></td></tr>";
+				$expensesSum +=$expenseSQL['SUM(e.amount)'];
 			}	
 			echo '<td class="tablesubtitle" colspan="2">SUMA</td><td><b>'.$expensesSum.' PLN </b></td></tr>';
 	}			
@@ -163,10 +168,12 @@
 					</div>
 				</div>
 			</section>
-			<footer class="text-center my-2">
-				Autor strony: Kinga Kowal
-			</footer>
 	</div>
+	
+	<footer>
+		<div class="footer text-center my-2">2021 © Kinga Kowal</div>
+	</footer>
+	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src ="js/bootstrap.min.js"></script>

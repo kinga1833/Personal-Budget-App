@@ -25,8 +25,8 @@
 <body>
 	<div class="container-fluid">
 		<header>
-			<h1 class="logo">
-				<span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span>Finanse.pl
+			<h1 class="logo text-center">
+				<div style="display:inline-block"><span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span></div><div style="display:inline-block">Finanse.pl</div>
 			</h1>
 			<h3>Aplikacja do zarządzania budżetem osobistym</h3>
 	
@@ -92,8 +92,8 @@
 			</div>			
 		</main>
 
-		<footer class="footer text-center my-2">
-			Autor strony: Kinga Kowal
+		<footer>
+			<div class="footer text-center my-2">2021 © Kinga Kowal</div>
 		</footer>
 
 	</div>

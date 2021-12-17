@@ -36,17 +36,18 @@
 				</h1>
 				<h3>Aplikacja do zarządzania budżetem osobistym</h3>
 			</header>
-				<div class="registersuccesfully mx-auto px-5 py-7 mt-5">
+				<div class="registersuccesfully mx-auto px-5 py-5 mt-5">
 				Udana rejestracja!<br />
 				Możesz już zalogować się stronie <b>mojeFinanse.pl<b>!
 				
 					<div class="login mb-2"><a href="loginsite.php" class="loginlink"><i class="icon-login"></i> Zaloguj się</a></div>
 				
 				</div>
-		<footer class="footer text-center my-2">
-			Autor strony: Kinga Kowal
-		</footer>
+		</div>
 	</div>
+	<footer>
+		<div class="footer text-center my-2">2021 © Kinga Kowal</div>
+	</footer>
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

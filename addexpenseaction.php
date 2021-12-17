@@ -1,14 +1,7 @@
 <?php
 	
 	session_start();
-	
-	if(!isset($_SESSION['signed_in']))
-	{
-		header('Location: index.php');
-		exit();
-	}
 	require_once "connect.php";
-	
 	$connection = new mysqli($host, $db_user, $db_password, $db_name);
 			
 	if ($connection->connect_errno!=0)
@@ -25,10 +18,12 @@
 		$comment = $_POST['comment'];
 		$userid = $_SESSION['id'];
 		
+		mysqli_set_charset($connection, "utf8");
 		$result1 = $connection->query("SELECT * FROM expenses_category_assigned_to_users WHERE expenses_category_assigned_to_users.user_id = '$userid' AND expenses_category_assigned_to_users.name = '$expensecategory'");
 		$row1 =$result1->fetch_assoc();
 		$expensecategorycategoryid = $row1['id'];
 		
+		mysqli_set_charset($connection, "utf8");
 		$result2 = $connection->query("SELECT * FROM payment_methods_assigned_to_users WHERE payment_methods_assigned_to_users.user_id = '$userid' AND payment_methods_assigned_to_users.name = '$paymentmethod'");
 		$row2 =$result2->fetch_assoc();
 		$paymentmethodid = $row2['id'];
@@ -44,6 +39,5 @@
 			}
 		}
 	}
-
 	$connection->close();
 ?>

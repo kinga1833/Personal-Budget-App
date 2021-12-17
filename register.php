@@ -123,18 +123,18 @@
 	<div class="container">
 		<div class="row">
 			<header>
-				<h1 class="logo">
-					<a href="index.php" class="logolink"><span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span>Finanse.pl</a>
+				<h1 class="logo text-center">
+					<div style="display:inline-block"><span style="color:#cda3bc"><i class="icon-wallet"></i>moje</span></div><div style="display:inline-block">Finanse.pl</div>
 				</h1>
 				<h3>Aplikacja do zarządzania budżetem osobistym</h3>
 			</header>
-				<section class="mx-auto">
+				<section class="mx-auto col-12 col-sm-10 col-md-8 col-lg-6">
 					<h2>Nowe konto</h2>
 					<div id="subtitle">Utwórz konto, aby w pełni móc korzystać z serwisu.</div>
 					<div class="registerorloginwindow">
 					
 						<form method="post">
-							<div class="input-group">
+							<div class="input-group mx-auto col-12 col-sm-10">
 								<div class="input-group-prepend"><i class="icon-user icons px-1"></i>
 								<input class="form-control userinput" type="text" name="username" placeholder="imię" aria-label="imię"></div>
 
@@ -151,7 +151,7 @@
 								?>
 							
 							
-							<div class="input-group">
+							<div class="input-group mx-auto col-12 col-sm-10">
 								<div class="input-group-prepend"><i class="icon-mail-alt icons px-1"></i>
 								<input class="form-control userinput" type="text" name="email" placeholder="e-mail" aria-label="e-mail"></div>
 							</div>
@@ -166,7 +166,7 @@
 							?>
 							
 							
-							<div class="input-group">
+							<div class="input-group mx-auto col-12 col-sm-10">
 								<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
 								<input class="form-control userinput" type="password" name="password1" placeholder="hasło" aria-label="hasło"></div>
 							</div>
@@ -179,22 +179,21 @@
 								}
 							
 							?>
-							
-
-							<div class="input-group">
+						
+							<div class="input-group mx-auto col-12 col-sm-10">
 								<div class="input-group-prepend"><i class="icon-lock icons px-1"></i>
 								<input class="form-control userinput" type="password" name="password2" placeholder="potwierdź hasło" aria-label=" potwierdź hasło"></div>
 							</div>
 
-							<button class="btn submitregistration" type="submit">Utwórz konto</button>
+							<button class="btn submitregistration mx-auto col-12 col-sm-10 col-lg-6" type="submit">Utwórz konto</button>
 						</form>
 					</div>
 				</section>
 		</div>
-		<footer class="footer text-center my-2">
-			Autor strony: Kinga Kowal
-		</footer>
 	</div>
+	<footer>
+			<div class="footer text-center my-2">2021 © Kinga Kowal</div>
+	</footer>
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
